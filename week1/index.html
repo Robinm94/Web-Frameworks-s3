@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      fetch("https://dummy.restapiexample.com/api/v1/employee/1")
+        .then(function (res) {
+          console.log(res);
+          return res.json();
+        })
+        .then(function (data) {
+          console.log(data);
+        });
+      // var xhttp = new XMLHttpRequest();
+      // xhttp.open("GET", "https://dummy.restapiexample.com/api/v1/employees", false);
+      // xhttp.send();
+      // var data = JSON.parse(xhttp.responseText);
+      // console.log(data);
+    </script>
+  </body>
+</html>
