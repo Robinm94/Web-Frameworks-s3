@@ -1,0 +1,14 @@
+{
+  "name": "week2-robin",
+  "version": "1.0.0",
+  "description": "Class activity week2 ITE5315",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
