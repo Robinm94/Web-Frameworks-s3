@@ -1,6 +1,5 @@
 const fs = require("fs");
 const http = require("http");
-const { json } = require("stream/consumers");
 
 function makeTable(data) {
   let table = `<table border="1">
@@ -26,13 +25,13 @@ function makeTable(data) {
   return table;
 }
 
-let tableHtml = "";
+let myDataAsync = "";
 fs.readFile("./week2/MOCK_DATA_act2.json", function (err, data) {
   if (err) {
     console.error(err);
     return;
   }
-  tableHtml = data;
+ myDataAsync = data;
 });
 let myData = fs.readFileSync("./week2/MOCK_DATA_act2.json");
 const server = http.createServer((req, res) => {
@@ -42,7 +41,7 @@ const server = http.createServer((req, res) => {
   }
 
   if (req.url === "/phonebook") {
-    res.write(makeTable(tableHtml));
+    res.write(makeTable(myDataAsync));
     res.end();
   }
   if (req.url === "/phonebooksync") {
