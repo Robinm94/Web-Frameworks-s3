@@ -1,17 +1,17 @@
 const express = require("express");
 const app = express();
-/**DecodeFormURLEncodeddata*/
+/**Decode Form URL Encoded data*/
 app.use(express.urlencoded({ extended: true }));
-/**Showpagewithaform*/
+/**Show page with a form*/
 app.get("/", (req, res, next) => {
   res.send(`<form method="POST"action="/">
   <input type="text" name="username" placeholder="username">
   <input type="submit">
   </form>`);
 });
-/**ProcessPOSTrequest*/
+/**Process POST request*/
 app.post("/", function (req, res) {
   res.send(JSON.stringify(req.body));
 });
-/**Runtheapp*/
+/**Run the app*/
 app.listen(3000);
