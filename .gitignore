@@ -5,7 +5,7 @@ coverage/
 .vscode/
 # Optional npm cache directory
 .npm
-
+.prettierrc
 # dotenv environment variables file
 .env
 *.zip
