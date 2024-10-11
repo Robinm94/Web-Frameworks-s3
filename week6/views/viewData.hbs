@@ -1,0 +1,16 @@
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Occupation</th>
+    <th>Company</th>
+  </tr>
+  {{#each data}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.age}}</td>
+      <td>{{this.occupation}}</td>
+      <td>{{this.company}}</td>
+    </tr>
+  {{/each}}
+</table>
