@@ -1,0 +1,16 @@
+<table border="1">
+  <tr>
+    <th>Student Id</th>
+    <th>Name</th>
+    <th>Program</th>
+    <th>Gpa</th>
+  </tr>
+  {{#each data}}
+    <tr>
+      <td>{{this.studId}}</td>
+      <td>{{this.name}}</td>
+      <td>{{this.program}}</td>
+      <td>{{this.gpa}}</td>
+    </tr>
+  {{/each}}
+</table>

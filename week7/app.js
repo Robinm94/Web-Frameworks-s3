@@ -30,13 +30,13 @@ const urlencodedParser = express.urlencoded({ extended: false });
 // Navigation
 app.get("", (req, res) => {
   res.render("index", {
-    layout: "main", // do not use the default Layout (main.hbs)
+    layout: "main", // use the default Layout (main.hbs)
   });
 });
 
 app.get("/calculation", (req, res) => {
   res.render("calculate", {
-    layout: "main", // do not use the default Layout (main.hbs)
+    layout: "main", // use the default Layout (main.hbs)
   });
 });
 
