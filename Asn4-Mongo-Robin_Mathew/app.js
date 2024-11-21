@@ -76,7 +76,7 @@ app.delete("/api/employees/:employee_id", async function (req, res) {
   console.log(req.params.employee_id);
   try {
     const id = req.params.employee_id;
-    const deletedEmployee = await Employee.findByIdAndRemove(id);
+    const deletedEmployee = await Employee.findByIdAndDelete(id);
     if (!deletedEmployee) {
       return res.status(404).send("Employee not found");
     }
