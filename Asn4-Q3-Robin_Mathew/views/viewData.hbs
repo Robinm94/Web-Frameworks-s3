@@ -1,0 +1,10 @@
+<table border="1">
+  {{>tablehead}}
+  <tbody>
+    {{#each movies}}
+      <tr>
+         {{>tabledata movie=this}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

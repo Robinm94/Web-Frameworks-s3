@@ -1,0 +1,45 @@
+<h2>Movie Info</h2>
+<div>
+  <p><strong>Movie ID:</strong> {{movie.Movie_ID}}</p>
+  <p><strong>Title:</strong> {{movie.Title}}</p>
+  <p><strong>Year:</strong> {{movie.Year}}</p>
+  <p><strong>Rated:</strong> {{movie.Rated}}</p>
+  <p><strong>Released:</strong> {{movie.Released}}</p>
+  <p><strong>Runtime:</strong> {{movie.Runtime}}</p>
+  <p><strong>Genre:</strong> {{movie.Genre}}</p>
+  <p><strong>Director:</strong> {{movie.Director}}</p>
+  <p><strong>Writer:</strong> {{movie.Writer}}</p>
+  <p><strong>Actors:</strong> {{movie.Actors}}</p>
+  <p><strong>Plot:</strong> {{movie.Plot}}</p>
+  <p><strong>Language:</strong> {{movie.Language}}</p>
+  <p><strong>Country:</strong> {{movie.Country}}</p>
+  <p><strong>Awards:</strong> {{movie.Awards}}</p>
+  <p><strong>Poster:</strong> <img src="{{movie.Poster}}" width="100" /></p>
+  <p><strong>Ratings Source:</strong> {{movie.Ratings.Source}}</p>
+  <p><strong>Ratings Value:</strong> {{movie.Ratings.Value}}</p>
+  <p><strong>Metascore:</strong> {{movie.Metascore}}</p>
+  <p><strong>IMDB Rating:</strong> {{movie.imdbRating}}</p>
+  <p><strong>IMDB Votes:</strong> {{movie.imdbVotes}}</p>
+  <p><strong>IMDB ID:</strong> {{movie.imdbID}}</p>
+  <p><strong>Type:</strong> {{movie.Type}}</p>
+  <p><strong>Tomato Meter:</strong> {{movie.tomatoMeter}}</p>
+  <p><strong>Tomato Image:</strong> {{movie.tomatoImage}}</p>
+  <p><strong>Tomato Rating:</strong> {{movie.tomatoRating}}</p>
+  <p><strong>Tomato Reviews:</strong> {{movie.tomatoReviews}}</p>
+  <p><strong>Tomato Fresh:</strong> {{movie.tomatoFresh}}</p>
+  <p><strong>Tomato Rotten:</strong> {{movie.tomatoRotten}}</p>
+  <p><strong>Tomato Consensus:</strong> {{movie.tomatoConsensus}}</p>
+  <p><strong>Tomato User Meter:</strong> {{movie.tomatoUserMeter}}</p>
+  <p><strong>Tomato User Rating:</strong> {{movie.tomatoUserRating}}</p>
+  <p><strong>Tomato User Reviews:</strong> {{movie.tomatoUserReviews}}</p>
+  <p><strong>Tomato URL:</strong>
+    <a href="{{movie.tomatoURL}}">Tomato URL</a></p>
+  <p><strong>DVD:</strong> {{movie.DVD}}</p>
+  <p><strong>Box Office:</strong> {{movie.BoxOffice}}</p>
+  <p><strong>Production:</strong> {{movie.Production}}</p>
+  <p><strong>Website:</strong>
+    {{#if movie.Website}}<a
+        href="{{movie.Website}}"
+      >{{movie.Website}}</a>{{/if}}</p>
+  <p><strong>Response:</strong> {{movie.Response}}</p>
+</div>
