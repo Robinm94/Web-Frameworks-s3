@@ -3,38 +3,13 @@
 <td>{{movie.Year}}</td>
 <td>{{movie.Rated}}</td>
 <td>{{movie.Released}}</td>
-<td>{{movie.Runtime}}</td>
 <td>{{movie.Genre}}</td>
 <td>{{movie.Director}}</td>
-<td>{{movie.Writer}}</td>
 <td>{{movie.Actors}}</td>
 <td>{{movie.Plot}}</td>
-<td>{{movie.Language}}</td>
-<td>{{movie.Country}}</td>
-<td>{{movie.Awards}}</td>
 <td><img src="{{movie.Poster}}" width="100" /></td>
-<td>{{movie.Ratings.Source}}</td>
-<td>{{movie.Ratings.Value}}</td>
-<td>{{movie.Metascore}}</td>
-<td>{{movie.imdbRating}}</td>
-<td>{{movie.imdbVotes}}</td>
-<td>{{movie.imdbID}}</td>
-<td>{{movie.Type}}</td>
-<td>{{movie.tomatoMeter}}</td>
-<td>{{movie.tomatoImage}}</td>
-<td>{{movie.tomatoRating}}</td>
-<td>{{movie.tomatoReviews}}</td>
-<td>{{movie.tomatoFresh}}</td>
-<td>{{movie.tomatoRotten}}</td>
-<td>{{movie.tomatoConsensus}}</td>
-<td>{{movie.tomatoUserMeter}}</td>
-<td>{{movie.tomatoUserRating}}</td>
-<td>{{movie.tomatoUserReviews}}</td>
-<td><a href="{{movie.tomatoURL}}">Tomato URL</a></td>
-<td>{{movie.DVD}}</td>
-<td>{{movie.BoxOffice}}</td>
-<td>{{movie.Production}}</td>
-<td>{{#if movie.Website}}<a
-      href="{{movie.Website}}"
-    >{{movie.Website}}</a>{{/if}}</td>
-<td>{{movie.Response}}</td>
+<td>
+  <a href="/data/search/id/{{movie.Movie_ID}}">View</a>
+  <a href="/movies/{{movie.Movie_ID}}/edit">Edit</a>
+  <a href="/movies/{{movie.Movie_ID}}/delete">Delete</a>
+</td>

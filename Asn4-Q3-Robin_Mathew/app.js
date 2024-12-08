@@ -22,9 +22,6 @@ app.engine(
   ".hbs",
   exphbs.engine({
     extname: ".hbs",
-    helpers: {
-      // rating,
-    },
   })
 );
 
@@ -33,6 +30,14 @@ app.set("view engine", "hbs");
 app.get("/", (req, res) => {
   res.render("index", {
     title: "Home",
+  });
+});
+
+app.get("/viewData", async (req, res) => {
+  const data = await Movie.find({}).sort({ Movie_ID: 1 }).lean();
+  res.render("viewData", {
+    title: "View Data",
+    movies: data,
   });
 });
 
@@ -248,10 +253,15 @@ app.post(
   body("Title").notEmpty().isString().escape(),
   async function (req, res) {
     // create mongose method to create a new record into collection
-    console.log(req.body);
     try {
-      if (!movie) {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
         return res.status(404).send("Data must have Movie_ID and Title");
+      }
+      const id = req.body.Movie_ID;
+      const searchMovie = await Movie.findOne({ Movie_ID: id });
+      if (searchMovie) {
+        return res.status(404).send("Movie with this ID already exists");
       }
       const movie = new Movie(req.body);
       await movie.save();
