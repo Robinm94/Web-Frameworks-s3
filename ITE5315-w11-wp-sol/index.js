@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 var book_routes = require("./routes/books");
 
 // Connect to database
-//mongoose.connect("mongodb://localhost/bookstore");
+//mongoose.connect("mongodb://127.0.0.1/bookstore");
 mongoose.connect("mongodb://127.0.0.1:27017/bookstore");
 let db = mongoose.connection;
 
